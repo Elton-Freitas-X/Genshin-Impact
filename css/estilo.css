@@ -15,7 +15,7 @@ a {
     background-repeat: no-repeat;
     padding-top: 48px;
     background-size: cover;
-    min-width: 1340px;
+    min-width: 1395px;
 }
 
 div.display {
@@ -29,7 +29,7 @@ img.logo {
 }
 
 div.buttons {
-    width: 237px;
+    width: 337px;
     margin-right: 54px;
     display: flex;
     justify-content: space-between;
@@ -37,29 +37,35 @@ div.buttons {
 }
 
  a.buttom1 {
-    font-family: Impact, fantasy;
+    font-family: sans-serif;
     border: 1px solid;
-    height: 49px;
+    height: 48px;
     text-align: center;
-    width: 100px;
-    border-radius: 34%;
+    width: 160px;
+    border-radius: 5px;
     color: rgb(145, 189, 226);
     background-color: #0b0546;
-    line-height: 25px;
-    opacity: 0.6;
+    line-height: 47px;
+    opacity: 0.9;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: bold;
  }
 
  a.buttom2 {
-    font-family: Impact, fantasy;
+    font-family: sans-serif;
     border: 1px solid;
-    height: 49px;
+    height: 48px;
     text-align: center;
-    width: 100px;
-    border-radius: 34%;
+    width: 160px;
+    border-radius: 5px;
     color: rgb(145, 189, 226);
-    background-color: #0b0546;
-    line-height: 45px;
-    opacity: 0.6;
+    background-color: #0a053f;
+    line-height: 47px;
+    opacity: 0.9;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: bold;
  }
 
  a.buttom1:hover, a.buttom2:hover  {
@@ -112,18 +118,12 @@ div.buttons {
 
 .borda {
     background-image: url(../img/36841e16b442b088ecc6da64952b1fd9_2507081675898911381.png);
-    height: 29vh;
+    height: 48vh;
     min-width: 1340px;
     background-position: top;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.borda2 {
-    display: flex;
-    justify-content: center;
-    min-width: 1370px;
 }
 
 h2.info {
@@ -134,7 +134,91 @@ h2.info {
     margin-top: 89px
 }
 
+/*CARROSSEL/SLIDE*/
+
+img.slide {
+    width: 100%;
+    height: 100%;
+}
+
+[type=radio] {
+    display: none;
+}
+
+#slider{
+    margin: 0 auto;
+    width: 1143px;
+    min-width: 1340px;
+    min-height: 509px;
+    height: 35vw;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+#slider label{
+    margin: auto;
+    width: 60%;
+    height: 100%;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+#s1:checked ~ #slider4, #s2:checked ~ #slider5, 
+#s3:checked ~ #slider1, #s4:checked ~ #slider2, 
+#s5:checked ~ #slider3{
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+    transform: translate3d(-30%,0,-200px);
+    height: 426px;
+}
+
+#s1:checked ~ #slider5, #s2:checked ~ #slider1, 
+#s3:checked ~ #slider2, #s4:checked ~ #slider3, 
+#s5:checked ~ #slider4{
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+    transform: translate3d(-15%,0,-100px);
+    height: 426px;
+}
+
+#s1:checked ~ #slider1, #s2:checked ~ #slider2, 
+#s3:checked ~ #slider3, #s4:checked ~ #slider4, 
+#s5:checked ~ #slider5{
+    box-shadow: 0 13px 25px 0 rgba(0,0,0,.3), 0 11px 7px 0 rgba(0,0,0,.19);
+    transform: translate3d(0,0,0);
+    height: 426px;
+}
+
+#s1:checked ~ #slider2, #s2:checked ~ #slider3, 
+#s3:checked ~ #slider4, #s4:checked ~ #slider5, 
+#s5:checked ~ #slider1{
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(121, 72, 72, 0.2);
+    transform: translate3d(-15%,0,-100px);
+    height: 426px;
+}
+
+#s1:checked ~ #slider3, #s2:checked ~ #slider4, 
+#s3:checked ~ #slider5, #s4:checked ~ #slider1, 
+#s5:checked ~ #slider2{
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+    transform: translate3d(30%,0,-200px);
+    height: 426px;
+}
+
+/*FINAL CARROSEL/SLIDE*/
+
+.borda2 {
+    display: flex;
+    justify-content: center;
+    min-width: 1348px;
+}
+
 ul#char {
+    min-width: 1348px;
+    min-height: 1100px;
     list-style: none;
     display: flex;
     justify-content: center;
@@ -163,7 +247,7 @@ li.char1:hover {
 footer {
     display: flex;
     flex-direction: column;
-    min-width: 1340px;
+    min-width: 1395px;
     background-color: #171618;
     height: 31vh;
 }
